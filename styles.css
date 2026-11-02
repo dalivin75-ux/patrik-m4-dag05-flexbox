@@ -13,16 +13,24 @@ body {
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
   background-color: #5b3a29;
   color: #ffffff;
   padding: 16px 24px;
 }
 
 header h1 {
-  margin: 0 0 8px;
+  margin: 0;
 }
 
 nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -42,12 +50,25 @@ section {
   margin-bottom: 40px;
 }
 
+.meny-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 article {
+  display: flex;
+  flex-direction: column;
   background-color: #ffffff;
   border: 1px solid #e3d5c3;
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 16px;
+}
+
+.meny-lista article {
+  flex: 1 1 220px;
+  margin-bottom: 0;
 }
 
 article img,
@@ -68,10 +89,20 @@ article img,
 }
 
 footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
   background-color: #2b1c14;
   color: #ffffff;
   padding: 24px;
 }
+
+/* justify-content styr huvudaxeln: center samlar innehållet i mitten,
+   flex-end skjuter det till slutet och space-around ger luft runt varje objekt.
+   align-items styr korsaxeln: center centrerar och flex-start/flex-end placerar
+   objekten i varsin ände. */
 
 footer a {
   color: #ffffff;
@@ -114,17 +145,16 @@ h3 {
 .pris {
   font-weight: 700;
   color: #8c1010;
+  margin-top: auto;
 }
 
 a {
   color: #8c1010;
   text-underline-offset: 3px;
 }
-
 a:hover {
-  color: #5e0a0a;
+  color: #e7e6e6;
 }
-
 nav a {
   font-weight: 600;
 }
