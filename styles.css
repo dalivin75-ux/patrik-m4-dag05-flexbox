@@ -104,10 +104,12 @@ footer {
   padding: 24px;
 }
 
-/* justify-content styr huvudaxeln: center samlar innehållet i mitten,
+/* 
+justify-content styr huvudaxeln: center samlar innehållet i mitten,
    flex-end skjuter det till slutet och space-around ger luft runt varje objekt.
    align-items styr korsaxeln: center centrerar och flex-start/flex-end placerar
-   objekten i varsin ände. */
+   objekten i varsin ände. 
+   */
 
 footer a {
   color: #ffffff;
