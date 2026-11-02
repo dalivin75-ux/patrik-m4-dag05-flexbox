@@ -9,7 +9,12 @@
 <body>
   <header>
     <h1>Kafé Kardemumma</h1>
-    <nav aria-label="Huvudmeny">
+    <input class="meny-toggle" type="checkbox" id="meny-toggle" aria-label="Visa menyn">
+    <label class="meny-knapp" for="meny-toggle">
+      <span class="hamburger-ikon" aria-hidden="true"></span>
+      Meny
+    </label>
+    <nav id="huvudmeny" aria-label="Huvudmeny">
       <ul>
         <li><a href="index.html">Startsida</a></li>
         <li><a href="index.html#meny">Meny</a></li>
@@ -28,7 +33,7 @@
         <input type="text" id="namn" name="namn" autocomplete="name" required>
       </div>
 
-      <div class="falt">
+      <div class="falt falt--rad">
         <label for="epost">E-postadress *</label>
         <input type="email" id="epost" name="epost" autocomplete="email" required>
       </div>

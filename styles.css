@@ -27,6 +27,11 @@ header h1 {
   margin: 0;
 }
 
+#meny-toggle,
+.meny-knapp {
+  display: none;
+}
+
 nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -112,6 +117,82 @@ address {
   font-style: normal;
 }
 
+@media (max-width: 600px) {
+  #meny-toggle {
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .meny-knapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .hamburger-ikon,
+  .hamburger-ikon::before,
+  .hamburger-ikon::after {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: currentColor;
+  }
+
+  .hamburger-ikon {
+    position: relative;
+  }
+
+  .hamburger-ikon::before,
+  .hamburger-ikon::after {
+    position: absolute;
+    content: "";
+  }
+
+  .hamburger-ikon::before {
+    top: -6px;
+  }
+
+  .hamburger-ikon::after {
+    top: 6px;
+  }
+
+  #meny-toggle:focus-visible + .meny-knapp {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+  }
+
+  header nav {
+    display: none;
+    flex-basis: 100%;
+  }
+
+  #meny-toggle:checked ~ nav {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  nav a {
+    display: block;
+    padding: 8px 0;
+  }
+}
+
 /* ===== Dag 4: typografi och färg ===== */
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -187,6 +268,23 @@ textarea:focus-visible {
 .falt,
 .val {
   margin-bottom: 16px;
+}
+
+.falt--rad {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.falt--rad label {
+  margin-bottom: 0;
+}
+
+.falt--rad input {
+  flex-grow: 1;
+  width: auto;
+  max-width: none;
+  min-width: 0;
 }
 
 label {

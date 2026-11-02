@@ -9,7 +9,12 @@
 <body>
   <header>
     <h1>Kafé Kardemumma</h1>
-    <nav aria-label="Huvudmeny">
+    <input class="meny-toggle" type="checkbox" id="meny-toggle" aria-label="Visa menyn">
+    <label class="meny-knapp" for="meny-toggle">
+      <span class="hamburger-ikon" aria-hidden="true"></span>
+      Meny
+    </label>
+    <nav id="huvudmeny" aria-label="Huvudmeny">
       <ul>
         <li><a href="#meny">Meny</a></li>
         <li><a href="#om-oss">Om oss</a></li>
